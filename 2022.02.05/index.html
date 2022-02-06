@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PixelGame</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .board {
+            width: 1000px;
+            height: 700px;
+            background-image: url(img/bg.jpeg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+        .pet {
+            position: absolute;
+            height: 61px;
+            width: 80px;
+            /*background-color: red;*/
+            background-image: url(img/el.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom;
+            transition: .2s linear;
+            transition-property: transform, top;
+            z-index: 10;
+        }
+        .pet.left {
+            transform: scale(1,1);
+        }
+        .pet.right {
+            transform: scale(-1,1);
+        }
+        .plBlock {
+            /*background-color: #f004;*/
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+        .platform {
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            background-image: url(img/pl.png);
+            background-size: contain;
+            transition: transform .5s linear;
+            /*background-color: blue;*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="board"></div>
+    <script src="script.js"></script>
+</body>
+</html>
